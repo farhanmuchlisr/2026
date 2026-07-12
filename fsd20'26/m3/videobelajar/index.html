@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Han Academy</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <a href="pages/login.html">Login</a>
+    <a href="pages/register.html">Register</a> -->
+    <!-- Header Navigation -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="./images/logo.png" alt="Logo videobelajar"
+          /></a>
+        </div>
+
+        <button class="burger-menu" id="burger-btn">&#9776;</button>
+
+        <div class="nav-right" id="nav-menu">
+          <a href="#" class="nav-link">Kategori</a>
+          <div class="profile-avatar">
+            <a href="#">
+              <img
+                src="./images/profile-avatar.png"
+                alt="Foto Profil User"
+                class="profile-avatar"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="main.js"></script>
+    <!-- <script>
+      const burgerBtn = document.getElementById("burger-btn");
+      const navMenu = document.getElementById("nav-menu");
+
+      burgerBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script> -->
+
+    <!-- <header class="navbar-sidebar">
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="./images/logo.png" alt="Logo videobelajar"
+          /></a>
+        </div>
+        <div class="nav-right">
+          <a href="#" class="nav-link">Kategori</a>
+          <div class="profile-avatar">
+            <a href="#">
+              <img
+                src="./images/profile-avatar.png"
+                alt="Foto Profil User"
+                class="profile-avatar"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header> -->
+
+    <!-- Hero Banner Section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+
+      <div class="container">
+        <div class="hero-banner">
+          <div class="hero-content">
+            <h1>
+              Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video
+              Interaktif!
+            </h1>
+            <p>
+              Temukan ilmu baru yang menarik dan mendalam melalui koleksi video
+              pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat
+              berpartisipasi dalam latihan interaktif yang akan meningkatkan
+              pemahaman Anda.
+            </p>
+            <a href="#" class="btn-hero"
+              >Temukan Video Course untuk Dipelajari!</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Section -->
+    <section class="course-section">
+      <div class="container">
+        <h2>Koleksi Video Pembelajaran Unggulan</h2>
+        <p class="section-subtitle">Jelajahi Dunia Pengetahuan Melalui Kami</p>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+          <span class="tab active">Semua Kelas</span>
+          <span class="tab">Pemasaran</span>
+          <span class="tab">Desain</span>
+          <span class="tab">Pengembangan Diri</span>
+          <span class="tab">Bisnis</span>
+        </div>
+
+        <!-- Product/Course Grid -->
+        <div class="course-grid">
+          <!-- Repeatable Card 1 -->
+          <div class="course-card">
+            <div class="card-image image-placeholder-1">
+              <!-- <img src="./images/card-1.jpg" alt="Card-1"> -->
+            </div>
+            <div class="card-body">
+              <h3>Big 4 Auditor Financial Analyst</h3>
+              <p class="card-desc">
+                Mulai transformasi dengan instruktur profesional, harga yang
+                terjangkau, dan...
+              </p>
+              <div class="instructor">
+                <div class="inst-avatar-1"></div>
+                <div class="inst-info">
+                  <h4>Jenna Ortega</h4>
+                  <p>Senior Accountant at Gojek</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="rating">⭐⭐⭐⭐⭐<span>5 (18)</span></div>
+                <div class="price">Rp 300K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeatable Card 2 -->
+          <div class="course-card">
+            <div class="card-image image-placeholder-2"></div>
+            <div class="card-body">
+              <h3>Big 4 Auditor Financial Analyst</h3>
+              <p class="card-desc">
+                Mulai transformasi dengan instruktur profesional, harga yang
+                terjangkau, dan...
+              </p>
+              <div class="instructor">
+                <div class="inst-avatar-2"></div>
+                <div class="inst-info">
+                  <h4>Jenna Ortega</h4>
+                  <p>Senior Accountant at Gojek</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="rating">⭐⭐⭐⭐⭐<span>5 (18)</span></div>
+                <div class="price">Rp 300K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeatable Card 3 -->
+          <div class="course-card">
+            <div class="card-image image-placeholder-3"></div>
+            <div class="card-body">
+              <h3>Big 4 Auditor Financial Analyst</h3>
+              <p class="card-desc">
+                Mulai transformasi dengan instruktur profesional, harga yang
+                terjangkau, dan...
+              </p>
+              <div class="instructor">
+                <div class="inst-avatar-3"></div>
+                <div class="inst-info">
+                  <h4>Jenna Ortega</h4>
+                  <p>Senior Accountant at Gojek</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="rating">⭐⭐⭐⭐⭐<span>5 (18)</span></div>
+                <div class="price">Rp 300K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeatable Card 4 -->
+          <div class="course-card">
+            <div class="card-image image-placeholder-4"></div>
+            <div class="card-body">
+              <h3>Big 4 Auditor Financial Analyst</h3>
+              <p class="card-desc">
+                Mulai transformasi dengan instruktur profesional, harga yang
+                terjangkau, dan...
+              </p>
+              <div class="instructor">
+                <div class="inst-avatar-4"></div>
+                <div class="inst-info">
+                  <h4>Jenna Ortega</h4>
+                  <p>Senior Accountant at Gojek</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="rating">⭐⭐⭐⭐⭐<span>5 (18)</span></div>
+                <div class="price">Rp 300K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeatable Card 5 -->
+          <div class="course-card">
+            <div class="card-image image-placeholder-5"></div>
+            <div class="card-body">
+              <h3>Big 4 Auditor Financial Analyst</h3>
+              <p class="card-desc">
+                Mulai transformasi dengan instruktur profesional, harga yang
+                terjangkau, dan...
+              </p>
+              <div class="instructor">
+                <div class="inst-avatar-5"></div>
+                <div class="inst-info">
+                  <h4>Jenna Ortega</h4>
+                  <p>Senior Accountant at Gojek</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="rating">⭐⭐⭐⭐⭐<span>5 (18)</span></div>
+                <div class="price">Rp 300K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeatable Card 6 -->
+          <div class="course-card">
+            <div class="card-image image-placeholder-6"></div>
+            <div class="card-body">
+              <h3>Big 4 Auditor Financial Analyst</h3>
+              <p class="card-desc">
+                Mulai transformasi dengan instruktur profesional, harga yang
+                terjangkau, dan...
+              </p>
+              <div class="instructor">
+                <div class="inst-avatar-6"></div>
+                <div class="inst-info">
+                  <h4>Jenna Ortega</h4>
+                  <p>Senior Accountant at Gojek</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="rating">⭐⭐⭐⭐⭐<span>5 (18)</span></div>
+                <div class="price">Rp 300K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeatable Card 7 -->
+          <div class="course-card">
+            <div class="card-image image-placeholder-7"></div>
+            <div class="card-body">
+              <h3>Big 4 Auditor Financial Analyst</h3>
+              <p class="card-desc">
+                Mulai transformasi dengan instruktur profesional, harga yang
+                terjangkau, dan...
+              </p>
+              <div class="instructor">
+                <div class="inst-avatar-7"></div>
+                <div class="inst-info">
+                  <h4>Jenna Ortega</h4>
+                  <p>Senior Accountant at Gojek</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="rating">⭐⭐⭐⭐⭐<span>5 (18)</span></div>
+                <div class="price">Rp 300K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeatable Card 8 -->
+          <div class="course-card">
+            <div class="card-image image-placeholder-8"></div>
+            <div class="card-body">
+              <h3>Big 4 Auditor Financial Analyst</h3>
+              <p class="card-desc">
+                Mulai transformasi dengan instruktur profesional, harga yang
+                terjangkau, dan...
+              </p>
+              <div class="instructor">
+                <div class="inst-avatar-8"></div>
+                <div class="inst-info">
+                  <h4>Jenna Ortega</h4>
+                  <p>Senior Accountant at Gojek</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="rating">⭐⭐⭐⭐⭐<span>5 (18)</span></div>
+                <div class="price">Rp 300K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeatable Card 9 -->
+          <div class="course-card">
+            <div class="card-image image-placeholder-9"></div>
+            <div class="card-body">
+              <h3>Big 4 Auditor Financial Analyst</h3>
+              <p class="card-desc">
+                Mulai transformasi dengan instruktur profesional, harga yang
+                terjangkau, dan...
+              </p>
+              <div class="instructor">
+                <div class="inst-avatar-9"></div>
+                <div class="inst-info">
+                  <h4>Jenna Ortega</h4>
+                  <p>Senior Accountant at Gojek</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="rating">⭐⭐⭐⭐⭐<span>5 (18)</span></div>
+                <div class="price">Rp 300K</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <!-- <img src="./images/newsletter.jpg" alt="Newsletter Banner" class="banner-img"> -->
+      <div class="banner-overlay"></div>
+      <div class="newsletter-banner">
+        <!-- <img
+          src="./images/newsletter.jpg"
+          alt="Newsletter Banner"
+          class="newsletter-banner"
+        /> -->
+        <span class="newsletter-tag">NEWSLETTER</span>
+        <h2>Mau Belajar Lebih Banyak?</h2>
+        <p>
+          Daftarkan emailmu untuk mendapatkan informasi terbaru dan penawaran
+          spesial dari program-program terbaik Harisenin.id
+        </p>
+
+        <form
+          class="newsletter-form"
+          action="#"
+          method="POST"
+          onsubmit="event.preventDefault()"
+        >
+          <input type="email" placeholder="Masukkan Emailmu" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Footer -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Brand Summary Column -->
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <!-- <div class="footer-logo">video<span>belajar</span></div> -->
+            <a href="./index.html"
+              ><img src="./images/logo.png" alt="Logo videobelajar"
+            /></a>
+            <p class="brand-pitch">
+              Gali Potensi Anda Melalui Pembelajaran Video di Harisenin.id!
+            </p>
+            <p class="contact-info">Jl. Taman Gg. No. 100, Lowokwaru, Malang</p>
+            <p class="contact-info">+62-811-1232-1234</p>
+          </div>
+
+          <!-- Categories Directory Column -->
+          <div class="footer-links-col">
+            <h4>Kategori</h4>
+            <a href="#">Digital & Teknologi</a>
+            <a href="#">Pemasaran</a>
+            <a href="#">Manajemen Bisnis</a>
+            <a href="#">Pengembangan DIri</a>
+            <a href="#">Desain</a>
+          </div>
+
+          <!-- Corporate Directory Column -->
+          <div class="footer-links-col">
+            <h4>Perusahaan</h4>
+            <a href="#">Tentang Kami</a>
+            <a href="#">FAQ</a>
+            <a href="#">Kebijakan Privasi</a>
+            <a href="#">Ketentuan Layanan</a>
+            <a href="#">Bantuan</a>
+          </div>
+
+          <!-- Community Directory Column -->
+          <div class="footer-links-col">
+            <h4>Komunitas</h4>
+            <a href="#">Tips Sukses</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+
+        <!-- Social Handles & Copyright Row -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Gerakan Inovasi. All Rights Reserved.</p>
+          <div class="social-icons">
+            <!-- <span class="icon-circle">in</span>
+            <span class="icon-circle">f</span>
+            <span class="icon-circle">i</span>
+            <span class="icon-circle">t</span> -->
+
+            <a href="#">
+              <span class="icon-circle"><i class="bx bxl-linkedin"></i></span>
+            </a>
+            <a href="#">
+              <span class="icon-circle"><i class="bx bxl-facebook"></i></span>
+            </a>
+            <a href="#">
+              <span class="icon-circle"><i class="bx bxl-instagram"></i></span>
+            </a>
+            <a href="#">
+              <span class="icon-circle"><i class="bx bxl-twitter"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
