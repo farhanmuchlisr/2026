@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="../styles/register.css" />
+  </head>
+  <body>
+    <!-- Main Responsive Layout Wrapper -->
+
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="../index.html"
+            ><img src="../images/logo.png" alt="Logo videobelajar"
+          /></a>
+        </div>
+
+        <!-- <button class="burger-menu" id="burger-btn">&#9776;</button> -->
+
+        <div class="nav-right" id="nav-menu">
+          <!-- <a href="#" class="nav-link">Kategori</a> -->
+          <!-- <div class="profile-avatar">
+            <a href="#">
+              
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </header>
+
+    <!-- <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="../images/logo.png" alt="Logo videobelajar"
+          /></a>
+        </div>
+      </div>
+    </header> -->
+
+      <!-- <header class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <span class="logo-orange">video</span
+          ><span class="logo-red">belajar</span>
+        </div>
+      </div>
+    </header> -->
+
+      <!-- Centered Register Card Section -->
+      <main class="register-container">
+        <div class="register-card">
+          <div class="form-header">
+            <h2>Pendaftaran Akun</h2>
+            <p>Yuk, daftarkan akunmu sekarang juga!</p>
+          </div>
+
+          <form class="register-form">
+            <!-- Full Name -->
+            <div class="input-group">
+              <label for="nama"
+                >Nama Lengkap <span class="required">*</span></label
+              >
+              <input type="text" id="nama" value="" required />
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+              <label for="email">E-Mail <span class="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                value=""
+                required
+              />
+            </div>
+
+            <!-- Gender Dropdown -->
+            <div class="input-group">
+              <label for="gender"
+                >Jenis Kelamin <span class="required">*</span></label
+              >
+              <div class="select-wrapper">
+                <select id="gender" required>
+                  <option value="Wanita" selected>Wanita</option>
+                  <option value="Pria">Pria</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Phone Number with Country Code Split -->
+            <div class="input-group">
+              <label for="phone">No. Hp <span class="required">*</span></label>
+              <div class="phone-input-row">
+                <div class="country-code-selector">
+                  <img src="../images/indonesia-flag.png" alt="Indonesia Flag" class="flag" />
+                  <select aria-label="Country Code">
+                    <option value="+62">+62</option>
+                  </select>
+                </div>
+                <input type="tel" id="phone" value="" required />
+              </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="input-group">
+              <label for="password"
+                >Kata Sandi <span class="required">*</span></label
+              >
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  value=""
+                  required
+                />
+
+              <!-- Visibility Icon Wrapper -->
+              <button
+                type="button"
+                class="toggle-password"
+                aria-label="Toggle password visibility"
+              >
+                <svg
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="eye-icon"
+                >
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                  ></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+
+                <!-- <i class="fa-regular fa-eye-slash toggle-password"></i> -->
+              </div>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="input-group">
+              <label for="confirm-password"
+                >Konfirmasi Kata Sandi <span class="required">*</span></label
+              >
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="confirm-password"
+                  value=""
+                  required
+                />
+
+                <!-- Visibility Icon Wrapper -->
+              <button
+                type="button"
+                class="toggle-password"
+                aria-label="Toggle password visibility"
+              >
+                <svg
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="eye-icon"
+                >
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                  ></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+                <!-- <i class=""></i> -->
+              </div>
+            </div>
+
+            <!-- Forgot Password Link -->
+            <div class="forgot-link-wrapper">
+              <a href="#" class="forgot-link">Lupa Password?</a>
+            </div>
+
+            <!-- Form Action Buttons -->
+            <div class="button-group">
+              <button type="submit" class="btn btn-primary">Daftar</button>
+              <button type="button" class="btn btn-secondary">Masuk</button>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider">
+              <span>atau</span>
+            </div>
+
+            <!-- Social Media Register -->
+            <button type="button" class="btn-google">
+              <img src="../images/google-icon.png" alt="Google Logo" />
+              Daftar dengan Google
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
