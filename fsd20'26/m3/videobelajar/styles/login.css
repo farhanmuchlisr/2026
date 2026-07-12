@@ -1,0 +1,452 @@
+@import url("./global.css");
+
+/* body {
+  background-color: #fffdf3;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* main {
+  width: 360px;
+   
+  min-width: 360px;
+  max-width: 1440px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .header {
+  margin: 20px 0;
+  text-align: center;
+} */
+/* .header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222325;
+  line-height: 110%;
+  letter-spacing: 0px;
+  margin-bottom: 4px;
+} */
+
+/* .header p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+} */
+
+/* LOGIN LOGIN LOGIN */
+/* Responsive Header/Navigation */
+/* .navbar {
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  width: 100%;
+  min-width: 360px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo-orange {
+  color: #f2994a;
+}
+
+.logo-red {
+  color: #eb5757;
+} */
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #f1f1f1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 16px 24px 16px 24px;
+  width: 100%;
+  max-width: 1440px;
+  /* margin-left: 0px; */
+  /* margin-left: auto; */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f37021;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: #4b5563;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  padding: 28px 28px;
+}
+
+.profile-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  background-color: #e2e8f0;
+  /*background-image: linear-gradient(135deg, #fcd34d 0%, #b45309 100%);*/
+}
+
+/* Main Page & Card Layout */
+.page-container {
+  flex: 1;
+  width: 100%;
+  /* height: 100%; */
+  /* min-height: 100%; */
+  /* min-width: 360px; */
+  /* max-width: 1440px; */
+  margin: 0 auto;
+  /* margin: 0; */
+  /* padding: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 200px 20px; */
+  /* padding: 40px 20px; */
+  /* padding: 23px 16px; */
+  padding: 30px 16px;
+  /* background-color: #fffdf3; */
+  /* background-color: red; */
+}
+
+.login-card {
+  background: #ffffff;
+  width: 100%;
+  /* height: 100%; */
+  /* min-width: 390px; */
+  max-width: 460px;
+  /* max-width: 540px; */
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  /* padding: 40px 32px; */
+  padding: 32px 24px;
+  /* padding: 28px 20px; */
+  /* box-shadow: 0px 4px 16px rgba(0, gree0, blu0, alph0.2); */
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.card-header h1 {
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-weight: 600;
+  color: #222325;
+  margin-bottom: 10px;
+}
+
+.card-header p {
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333ad;
+}
+
+/* Form Elements & Inputs */
+.login-form .input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-family: "DM Sans";
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333ad;
+  margin-bottom: 8px;
+}
+
+.input-group label .required {
+  color: #ff5c2b;
+  margin-left: 2px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-size: 9px;
+  color: #333333;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+  -webkit-transition: border-color 0.2s;
+  -moz-transition: border-color 0.2s;
+  -ms-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #27ae60;
+}
+
+/* Password Input with Visibility Eye Icon */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  padding-right: 48px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 16px;
+  background: none;
+  /* border: none; */
+  cursor: pointer;
+  color: #a0a0a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.eye-icon {
+  width: 15px;
+  height: 15px;
+  /* border: white; */
+}
+
+/* Forgot Password Link styling */
+.forgot-container {
+  text-align: right;
+  margin-top: -8px;
+  margin-bottom: 28px;
+}
+
+.forgot-link {
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333ad;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Button (Masuk, Daftar, Google) */
+.aaction-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s, background-color 0.2s;
+  -webkit-transition: opacity 0.2s, background-color 0.2s;
+  -moz-transition: opacity 0.2s, background-color 0.2s;
+  -ms-transition: opacity 0.2s, background-color 0.2s;
+  -o-transition: opacity 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Button(Masuk) Bright Green Primary Button */
+.btn-primary {
+  background-color: #3ecf4c;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+/* Button(Daftar) Light Mint Secondary Button */
+.btn-secondary {
+  /* background-color: #3ecf4c; */
+  background-color: #e2fcd9;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 700;
+  color: #3ecf4c;
+}
+
+/* Centered Divider Component */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #4a505c;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 400;
+  margin: 24px 0;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.divider:not(:empty)::before {margin-right: 16px;}
+.divider:not(:empty)::after {margin-left: 16px;}
+
+/* White Bordered Google Button Component */
+.social-container {
+  width: 100%;
+}
+
+.btn-google {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  color: #4a505c;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+}
+
+.btn-google:hover {
+  background-color: #f9f9f9;
+}
+
+.btn-google img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Media Breakpoint & Specific Layout Scale */
+/* @media (max-width: 360px) {
+  .navbar-container {
+    padding: 16px 20px;
+    margin-left: 0;
+  }
+} */
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 16px 20px;
+    margin: auto;
+    /* margin-left: 0; */
+  }
+  
+
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .page-container {
+    padding: 20px 16px;
+  }
+
+  .login-card {
+    padding: 32px 20px;
+    /* border: none; */
+    /* background: transparent; */
+  }
+}
+
+@media (max-width: 400px) {
+    .login-card {
+        padding: 24px 16px;
+    }
+    
+    .form-header h2 {
+        font-size: 21px;
+    }
+}
