@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+      <div class="container header-inner">
+        <div class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-list"></i></div>
+          ToDoListApp
+        </div>
+        <div class="header-stats" id="headerStats">
+          <span class="stat-item"
+            ><span class="stat-dot pending"></span>
+            <span id="statPending">0</span> pending</span
+          >
+          <span class="stat-item"
+            ><span class="stat-dot done"></span>
+            <span id="statDone">0</span> done</span
+          >
+          <span class="stat-item"
+            ><span class="stat-dot overdue"></span>
+            <span id="statOverdue">0</span> overdue</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- Form Section -->
+      <section class="form-card" aria-label="Add new task">
+        <h2><i class="fa-solid fa-plus-circle"></i> Add New Task</h2>
+        <form id="taskForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nameInput">Name</label>
+              <input
+                type="text"
+                id="nameInput"
+                placeholder="Your full name"
+                autocomplete="name"
+              />
+              <span class="error-msg" id="nameError"
+                >Please enter your name</span
+              >
+            </div>
+            <div class="form-group">
+              <label for="jobInput">Job Title</label>
+              <input
+                type="text"
+                id="jobInput"
+                placeholder="e.g. Software Engineer"
+                autocomplete="organization-title"
+              />
+              <span class="error-msg" id="jobError"
+                >Please enter your job title</span
+              >
+            </div>
+            <div class="form-group full-width">
+              <label for="taskInput">Task Description</label>
+              <textarea
+                id="taskInput"
+                placeholder="Describe what needs to be done..."
+                rows="3"
+              ></textarea>
+              <span class="error-msg" id="taskError"
+                >Please describe the task</span
+              >
+            </div>
+            <div class="form-group">
+              <label for="priorityInput">Priority Level</label>
+              <select id="priorityInput">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dueDateInput"
+                >Due Date & Time
+                <span
+                  style="
+                    color: var(--muted);
+                    font-weight: 400;
+                    text-transform: none;
+                  "
+                  >(optional)</span
+                ></label
+              >
+              <input type="datetime-local" id="dueDateInput" />
+            </div>
+            <div class="form-group form-submit-group">
+              <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-plus"></i> Add Task
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Filter Tabs -->
+      <section class="filter-section" role="tablist" aria-label="Filter tasks">
+        <button
+          class="filter-tab active"
+          data-filter="all"
+          role="tab"
+          aria-selected="true"
+        >
+          All Tasks <span class="tab-count" id="allCount">0</span>
+        </button>
+        <button
+          class="filter-tab"
+          data-filter="overdue"
+          role="tab"
+          aria-selected="false"
+        >
+          <i
+            class="fa-solid fa-triangle-exclamation"
+            style="font-size: 0.72rem; color: var(--danger)"
+          ></i>
+          Overdue
+          <span class="tab-count tab-count-danger" id="overdueCount">0</span>
+        </button>
+        <button
+          class="filter-tab"
+          data-filter="high"
+          role="tab"
+          aria-selected="false"
+        >
+          High Priority <span class="tab-count" id="highCount">0</span>
+        </button>
+        <button
+          class="filter-tab"
+          data-filter="today"
+          role="tab"
+          aria-selected="false"
+        >
+          Due Today <span class="tab-count" id="todayCount">0</span>
+        </button>
+      </section>
+
+      <!-- To-Do List -->
+      <section class="list-section" id="todoSection" aria-label="To-do tasks">
+        <div class="list-header">
+          <h2><i class="fa-solid fa-list-check"></i> To-Do List</h2>
+          <div class="list-actions">
+            <span class="task-count" id="todoCountLabel">0 tasks</span>
+            <button
+              class="btn-delete-all"
+              id="deleteAllBtn"
+              aria-label="Delete all tasks"
+            >
+              <i class="fa-solid fa-trash-can"></i> Delete All
+            </button>
+          </div>
+        </div>
+        <div id="todoList" class="task-list" role="list"></div>
+        <div id="todoEmpty" class="empty-state">
+          <i class="fa-regular fa-clipboard"></i>
+          <p>No tasks yet. Add one above to get started.</p>
+        </div>
+      </section>
+
+      <!-- Done List -->
+      <section
+        class="list-section"
+        id="doneSection"
+        aria-label="Completed tasks"
+      >
+        <div
+          class="list-header"
+          id="doneToggle"
+          style="cursor: pointer"
+          role="button"
+          tabindex="0"
+          aria-expanded="true"
+          aria-controls="doneList"
+        >
+          <h2><i class="fa-solid fa-circle-check"></i> Completed</h2>
+          <div class="list-actions">
+            <span class="task-count" id="doneCountLabel">0 tasks</span>
+            <button
+              class="btn-clear-done"
+              id="clearDoneBtn"
+              aria-label="Clear completed tasks"
+            >
+              <i class="fa-solid fa-broom"></i> Clear
+            </button>
+            <i
+              class="fa-solid fa-chevron-down toggle-icon"
+              id="doneToggleIcon"
+            ></i>
+          </div>
+        </div>
+        <div id="doneList" class="task-list done-list" role="list"></div>
+        <div id="doneEmpty" class="empty-state">
+          <i class="fa-regular fa-face-smile"></i>
+          <p>No completed tasks yet. Keep going!</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Edit Modal -->
+    <div
+      class="modal-overlay"
+      id="editModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="editModalTitle"
+    >
+      <div class="modal">
+        <div class="modal-header">
+          <h3 id="editModalTitle">Edit Task</h3>
+          <button class="modal-close" id="modalClose" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <form id="editForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="editName">Name</label>
+              <input type="text" id="editName" />
+              <span class="error-msg" id="editNameError"
+                >Please enter a name</span
+              >
+            </div>
+            <div class="form-group">
+              <label for="editJob">Job Title</label>
+              <input type="text" id="editJob" />
+              <span class="error-msg" id="editJobError"
+                >Please enter a job title</span
+              >
+            </div>
+            <div class="form-group full-width">
+              <label for="editTask">Task Description</label>
+              <textarea id="editTask" rows="3"></textarea>
+              <span class="error-msg" id="editTaskError"
+                >Please describe the task</span
+              >
+            </div>
+            <div class="form-group">
+              <label for="editPriority">Priority Level</label>
+              <select id="editPriority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="editDueDate">Due Date & Time</label>
+              <input type="datetime-local" id="editDueDate" />
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn-cancel" id="editCancel">
+              Cancel
+            </button>
+            <button type="submit" class="btn-save">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Confirm Modal -->
+    <div
+      class="modal-overlay"
+      id="confirmModal"
+      role="alertdialog"
+      aria-modal="true"
+      aria-labelledby="confirmTitle"
+    >
+      <div class="modal modal-confirm">
+        <div class="modal-header" style="justify-content: center">
+          <h3 id="confirmTitle">Confirm Action</h3>
+        </div>
+        <p id="confirmMessage">Are you sure you want to proceed?</p>
+        <div class="modal-actions">
+          <button class="btn-cancel" id="confirmCancel">Cancel</button>
+          <button class="btn-danger" id="confirmOk">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" aria-live="polite"></div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        &copy; 2026 Farhan Muchlis Rintan. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
